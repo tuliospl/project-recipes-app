@@ -115,8 +115,8 @@ function DrinksDetails() {
               </ul>
             </section>
             <div className="instructions-container">
-              <h3>Instruções</h3>
-              <div data-testid="instructions">{details.strInstructions.split('.').map((instr) => (
+            <h3>Instruções</h3>
+            <div data-testid="instructions">{details.strInstructions.split('.').filter(r => r !== "").map((instr) => (
                 <p>{`- ${instr}.`}</p>
               ))}</div>
             </div>
